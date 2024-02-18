@@ -1,17 +1,13 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+};
 </script>
 
 <style>
@@ -23,4 +19,163 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
+:root{
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+}
+
+.bg-gradient {
+  background-image: var(--bs-gradient) !important;
+}
+
+.bg-gradient-primary-to-secondary {
+  background: #1e30f3;
+  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+}
+
+
+.profile {
+  position: relative;
+  height: 75vw;
+  width: 75vw;
+  border-radius: 5vw;
+  margin-top: 5vw;
+  max-height: 40rem;
+  max-width: 40rem;
+}
+.profile .profile-img {
+  height: 80vw;
+  max-height: 45rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.profile .dots-1 {
+  position: absolute;
+  width: 3vw;
+  right: 1.5vw;
+  top: 4vw;
+}
+.profile .dots-1 svg {
+  fill: #fff;
+}
+.profile .dots-2 {
+  position: absolute;
+  width: 3vw;
+  right: -4vw;
+  top: 6.05vw;
+}
+.profile .dots-2 svg {
+  fill: #1e30f3;
+}
+.profile .dots-3 {
+  position: absolute;
+  width: 3vw;
+  left: 1.5vw;
+  bottom: 6.05vw;
+}
+.profile .dots-3 svg {
+  fill: #fff;
+}
+.profile .dots-4 {
+  position: absolute;
+  width: 3vw;
+  left: -4vw;
+  bottom: 4vw;
+}
+.profile .dots-4 svg {
+  fill: #1e30f3;
+}
+
+
+.fw-bolder {
+  font-weight: bolder !important;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #1e30f3 0%, #e21e80 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  font-size: 1.5rem;
+}
+
+.me-3 {
+  margin-right: 1rem !important;
+}
+
+.rounded {
+  border-radius: var(--bs-border-radius) !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.rounded-1 {
+  border-radius: var(--bs-border-radius-sm) !important;
+}
+
+.rounded-2 {
+  border-radius: var(--bs-border-radius) !important;
+}
+
+.rounded-3 {
+  border-radius: var(--bs-border-radius-lg) !important;
+}
+
+.rounded-4 {
+  border-radius: var(--bs-border-radius-xl) !important;
+}
+
+.rounded-5 {
+  border-radius: var(--bs-border-radius-2xl) !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
+  border-radius: var(--bs-border-radius-pill) !important;
+}
+
+.rounded-top {
+  border-top-left-radius: var(--bs-border-radius) !important;
+  border-top-right-radius: var(--bs-border-radius) !important;
+}
+
+.rounded-end {
+  border-top-right-radius: var(--bs-border-radius) !important;
+  border-bottom-right-radius: var(--bs-border-radius) !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: var(--bs-border-radius) !important;
+  border-bottom-left-radius: var(--bs-border-radius) !important;
+}
+
+.rounded-start {
+  border-bottom-left-radius: var(--bs-border-radius) !important;
+  border-top-left-radius: var(--bs-border-radius) !important;
+}
+
+.text-bg-primary {
+  color: #fff !important;
+  background-color: RGBA(30, 48, 243, var(--bs-bg-opacity, 1)) !important;
+}
+
+.bg-primary {
+  --bs-bg-opacity: 1;
+  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+}
+
 </style>
